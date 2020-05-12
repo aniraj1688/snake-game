@@ -64,8 +64,10 @@ function draw()
 		snakeY+=box;
 	
 	if(snakeX>576 || snakeX<0 || snakeY>542 || snakeY<0)
+	{
 		clearInterval(game);
-		
+		window.alert("GAME OVER");
+	}
 	let newHead={x:snakeX,y:snakeY};
 	if(snakeX!=food.x || snakeY!=food.y)
 		snake.pop();
@@ -73,13 +75,15 @@ function draw()
 	{
 		generateFood();
 		score++;
+		t-=6;
 	}
 	snake.unshift(newHead);
-
+	
 	
 }
+let t=130;
 
-let game = setInterval(draw,130);
+let game = setInterval(draw,t);
 
 
 
