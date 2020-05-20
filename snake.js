@@ -1,4 +1,5 @@
-let t=100,speedX=1,speedY=1;
+let t=100,speedX=1;
+let speedY=1;
 const box=20;
 const cvs=document.getElementById('canvas');
 const ctx=cvs.getContext('2d');
