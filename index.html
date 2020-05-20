@@ -3,13 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Snake Game</title>
+		<link rel="stylesheet" href="style.css">
 
 	</head>
 	
 	
 	<body>
-		<canvas id="canvas" width="608" height="542" style="border:solid 2px black;"></canvas>
-	<h2 id="score" style="display:inline-block;"></h2>
+		<canvas id="canvas" class="canvas" width="620" height="540" style="border:solid 2px black;"></canvas>
+
+	<div class="box">
+		<div class="score btn" id="score">
+			<h2>SCORE<h2>
+		</div>
+		<div class="x btn">
+			<h2>Speed X</h2>
+		</div>
+		<div class="y btn">
+			<h2>Speed Y</h2>
+		</div>
+	
+	</div>
 	</body>		
 		<script src="snake.js"></script>
 </HTML>

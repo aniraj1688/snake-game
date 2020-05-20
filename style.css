@@ -1,0 +1,18 @@
+#canvas{
+	position:relative;
+	left:15%;
+}
+.box{
+	display:inline-block;
+	text-align:center;
+	background-color:rgba(0,0,0,0.5);
+	position:absolute;;
+	top:20%;
+	right:28%;
+	border-radius:30px;
+	
+}
+.btn{
+	display:block;
+	margin:20px;
+}
