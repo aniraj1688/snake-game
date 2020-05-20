@@ -1,4 +1,4 @@
-let t=100;
+let t=100,speedX=1,speedY=1;
 const box=20;
 const cvs=document.getElementById('canvas');
 const ctx=cvs.getContext('2d');
@@ -43,22 +43,32 @@ function direction(event)
 	let key=event.keyCode;
 	if(flag==true)
 	{
-	if(key==37 && d!="r")
-	{
-		d="l";
-	}
-	if(key==38 && d!="d")
-	{
-		d="u";
-	}
-	if(key==39 && d!="l")
-	{
-		d="r";
-	}
-	if(key==40 && d!="u")
-	{
-		d="d";
-	}
+		if(key==37 && d!="r")
+		{
+			d="l";
+			speedX=-1;
+			speedY=0;
+		}
+		if(key==38 && d!="d")
+		{
+			d="u";
+			speedY=1;
+			speedX=0;
+		}
+		if(key==39 && d!="l")
+		{
+			d="r";
+			speedX=1;
+			speedY=0;
+		}
+		if(key==40 && d!="u")
+		{
+			d="d";
+			speedY=-1;
+			speedX=0;
+		}
+		speedX*=20.00/t*1000;
+		speedY*=20.00/t*1000;
 		flag=false;
 	}
 }
@@ -106,7 +116,9 @@ function collision(){
 function draw()
 {
 
-	document.getElementById("score").innerHTML="SCORE : "+score;
+	document.getElementById("score").innerHTML="<h2>SCORE : "+score+"</h2>";
+	document.getElementById("x").innerHTML="<h4>SpeedX : "+speedX+"px/sec</h4>";
+	document.getElementById("y").innerHTML="<h4>SpeedY : "+speedY+"px/sec</h4>";
 	ctx.fillStyle="white";
 	ctx.fillRect(0,0,620,540);	
 	

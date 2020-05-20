@@ -4,12 +4,13 @@
 }
 .box{
 	display:inline-block;
-	text-align:center;
+
 	background-color:rgba(0,0,0,0.5);
 	position:absolute;;
 	top:20%;
-	right:28%;
+	right:16%;
 	border-radius:30px;
+	width:20%;
 	
 }
 .btn{
